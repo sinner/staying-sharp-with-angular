@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+/**
+ * Start Server
+ */
+var debug = require('debug')('staying-sharp');
+var app = require('../app');
+
+process.env.NODE_PATH = '.';
+app.set('port', process.env.PORT || 3000);
+
+var server = app.listen(app.get('port'), function() {
+    var logMessage = 'Express server for "Staying Sharp" is listening on port ' + server.address().port;
+    console.log(logMessage);
+    debug(logMessage);
+});

@@ -1,0 +1,28 @@
+<div class="note-wrapper">
+    <!-- Title -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>Notes</h3>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Page Features -->
+    <div class="row text-center">
+
+        <div class="col-md-3 col-sm-6 hero-feature card-notes" ng-repeat="note in notes">
+            <div class="thumbnail" title="{{note.title}}">
+                <img src="http://placehold.it/800x500" alt="">
+                <div class="caption">
+                    <h3>{{note.title}}</h3>
+                    <p>{{note.description}}.</p>
+                    <p>
+                        <a href="#" class="btn btn-primary">Contact him!</a> <a href="#" class="btn btn-default">More Info</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.row -->
+</div>
