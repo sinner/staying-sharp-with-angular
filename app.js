@@ -3,6 +3,7 @@ try {
     // Load external dependencies
     const express = require('express');
     const swig = require('swig');
+    const consolidate = require('consolidate');
     const path = require('path');
     const session = require('express-session');
     const mongoose = require('mongoose');
@@ -42,9 +43,9 @@ try {
 
     app.use(express.static(__dirname));
 
-    app.engine('html', swig.renderFile);
-    app.set('view engine', 'html');
+    app.set('view engine', 'swig');
     app.set('views', config.dirServerViews);
+    app.engine('.swig', consolidate.swig);
     app.set('view cache', false);
 
     swig.setDefaultTZOffset((new Date).getTimezoneOffset());

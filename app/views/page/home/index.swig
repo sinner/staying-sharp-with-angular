@@ -1,4 +1,4 @@
-{% extends '../../layout/main.html' %}
+{% extends '../../layout/main.swig' %}
 
 {% block container %}
 {{strOutput}}
